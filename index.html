@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="bg-gradient-to-r from-[#000000] to-[#1b1b1b] h-screen text-white">
-  <div class="flex flex-row h-3/4 p-4">
-    <div class="w-1/2 h-full p-4 flex flex-col justify-center items-center">
+<body class="bg-black h-screen text-white">
+  <div class="flex flex-col mt-16 md:mt-0 md:flex-row md:h-3/4 p-4">
+    <div class="w-full md:w-1/2 h-full p-4 flex flex-col justify-center items-center">
       <p class="text-xl md:text-2xl lg:text-4xl xl:text-6xl text-center">
         Hi, I am
         <span class="font-extrabold">
@@ -29,7 +29,18 @@
       </p>
     </div>
 
-    <!-- <div class="w-1/2 h-full bg-blue-500 p-4">Div 2</div> -->
+    <div class="w-full md:w-1/2 h-full p-4 flex flex-col justify-center items-center">
+      <div>
+        <!-- TODO: 3d -->
+      </div>
+      <div class="md:grid md:grid-cols-2 flex gap-4 flex-wrap">
+        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Skills</button>
+        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Experience</button>
+        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Projects</button>
+        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Contact</button>
+      </div>
+
+    </div>
   </div>
 
   <!-- Sections

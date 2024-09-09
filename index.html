@@ -32,6 +32,24 @@
     <div class="w-full md:w-1/2 h-full p-4 flex flex-col justify-center items-center">
       <div>
         <!-- TODO: 3d -->
+        <div id="character">
+          <div id="head">
+            <div id="eyes">
+              <div class="eye" id="left-eye">
+                <div class="iris">
+                  <div class="pupil" id="left-pupil"></div>
+                </div>
+              </div>
+              <div class="eye" id="right-eye">
+                <div class="iris">
+                  <div class="pupil" id="right-pupil"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
       </div>
       <div class="md:grid md:grid-cols-2 flex gap-4 flex-wrap">
         <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Skills</button>
@@ -63,6 +81,32 @@
     <h2 class="text-3xl font-bold">Contact</h2>
     <p>How to get in touch with you.</p>
   </section> -->
+  <script>
+    const leftPupil = document.getElementById('left-pupil');
+    const rightPupil = document.getElementById('right-pupil');
+  
+    document.addEventListener('mousemove', (e) => {
+      const eyes = document.querySelectorAll('.eye');
+      eyes.forEach(eye => {
+        const eyeRect = eye.getBoundingClientRect();
+        const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+        const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+  
+        const deltaX = e.clientX - eyeCenterX;
+        const deltaY = e.clientY - eyeCenterY;
+        const angle = Math.atan2(deltaY, deltaX); // Calculate the angle between eye and cursor
+  
+        // Limit the pupil movement inside the eye socket
+        const moveX = Math.cos(angle) * 5; // 5 is the max movement radius
+        const moveY = Math.sin(angle) * 5;
+  
+        const pupil = eye.querySelector('.pupil');
+        pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+  </script>
+  
+  
 </body>
 
 </html>

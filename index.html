@@ -11,51 +11,54 @@
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
 
-<body class="bg-black h-screen text-white">
+<body class="bg-[#1f1f1f] h-screen text-white">
   <div class="flex flex-col mt-16 md:mt-0 md:flex-row md:h-3/4 p-4">
     <div class="w-full md:w-1/2 h-full p-4 flex flex-col justify-center items-center">
-      <p class="text-xl md:text-2xl lg:text-4xl xl:text-6xl text-center">
+      <p class="text-4xl md:text-2xl lg:text-4xl xl:text-6xl text-center">
         Hi, I am
         <span class="font-extrabold">
-          <span class="bg-gradient-to-r from-[#67B26F] to-[#4ca2cd] text-transparent bg-clip-text mb-4 text-left tracking-tight leading-3">Sunmeet Oberoi</span>
-          <!-- <span class="text-white">Oberoi</span> -->
+          <span
+            class="bg-gradient-to-r from-[#67B26F] to-[#4ca2cd] text-transparent bg-clip-text mb-4 text-left tracking-tight leading-3">Sunmeet
+            Oberoi</span>
         </span>
       </p>
       <p class="text-xs md:text-sm lg:text-lg xl:text-2xl text-center mt-1">
-        <span class="">Software Engineer</span>
-        <span>at Cognizant</span>
+        Software Engineer 👨‍💻
       </p>
-    </div>
+    </div>  
 
     <div class="w-full md:w-1/2 h-full p-4 flex flex-col justify-center items-center">
-      <div>
-        <!-- TODO: 3d -->
-        <div id="character">
-          <div id="head">
-            <div id="eyes">
-              <div class="eye" id="left-eye">
-                <div class="iris">
-                  <div class="pupil" id="left-pupil"></div>
-                </div>
-              </div>
-              <div class="eye" id="right-eye">
-                <div class="iris">
-                  <div class="pupil" id="right-pupil"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
+      <div class="hidden md:block">
+        <img src="./assets/images/programmer.webp" class="h-96 mt-2 md:mt-28 rounded-lg">
       </div>
-      <div class="md:grid md:grid-cols-2 flex gap-4 flex-wrap">
-        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Skills</button>
-        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Experience</button>
-        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Projects</button>
-        <button type="button" class=" text-white border border-gray-300 hover:bg-gray-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center">Contact</button>
+      <div class="mt-20 md:grid md:grid-cols-2 flex gap-x-10 gap-y-5 flex-wrap justify-center items-center">
+        <button class="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span
+            class="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 border border-gray-300 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full bg-transparent border border-gray-300"></span>
+          <span class="relative text-white font-bold p-5">Skills</span>
+        </button>
+        <button class="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span
+            class="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 border border-gray-300 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full bg-transparent border border-gray-300"></span>
+          <span class="relative text-white font-bold p-5">Experience</span>
+        </button>
+        <button class="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span
+            class="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 border border-gray-300 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full bg-transparent border border-gray-300"></span>
+          <span class="relative text-white font-bold p-5">Projects</span>
+        </button>
+        <button class="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span
+            class="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 border border-gray-300 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full bg-transparent border border-gray-300"></span>
+          <span class="relative text-white font-bold p-5">Contact</span>
+        </button>
       </div>
 
     </div>
@@ -81,32 +84,7 @@
     <h2 class="text-3xl font-bold">Contact</h2>
     <p>How to get in touch with you.</p>
   </section> -->
-  <script>
-    const leftPupil = document.getElementById('left-pupil');
-    const rightPupil = document.getElementById('right-pupil');
-  
-    document.addEventListener('mousemove', (e) => {
-      const eyes = document.querySelectorAll('.eye');
-      eyes.forEach(eye => {
-        const eyeRect = eye.getBoundingClientRect();
-        const eyeCenterX = eyeRect.left + eyeRect.width / 2;
-        const eyeCenterY = eyeRect.top + eyeRect.height / 2;
-  
-        const deltaX = e.clientX - eyeCenterX;
-        const deltaY = e.clientY - eyeCenterY;
-        const angle = Math.atan2(deltaY, deltaX); // Calculate the angle between eye and cursor
-  
-        // Limit the pupil movement inside the eye socket
-        const moveX = Math.cos(angle) * 5; // 5 is the max movement radius
-        const moveY = Math.sin(angle) * 5;
-  
-        const pupil = eye.querySelector('.pupil');
-        pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
-      });
-    });
-  </script>
-  
-  
+  <script src="js/main.js"></script>
 </body>
 
 </html>

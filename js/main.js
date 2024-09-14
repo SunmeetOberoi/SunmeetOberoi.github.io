@@ -157,3 +157,21 @@ function createSkillSections() {
 // Call the function to create the sections
 document.addEventListener("DOMContentLoaded", createSkillSections);
 
+//------------------------------Back to top Button-------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTopButton = document.getElementById('back-to-top');
+
+  // Show or hide the button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.remove('hidden');
+    } else {
+      backToTopButton.classList.add('hidden');
+    }
+  });
+
+  // Smooth scroll to top when the button is clicked
+  backToTopButton.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

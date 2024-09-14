@@ -18,7 +18,7 @@
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
 </head>
 
-<body class="bg-[#1f1f1f] text-white">
+<body class="bg-[#1f1f1f] text-white pb-64">
   <div class="flex flex-col mt-16 md:mt-0 md:flex-row md:min-h-[75vh] min-h-3/4 h p-4 justify-center items-center">
     <div class="w-full md:w-2/3 h-full p-4 flex flex-col justify-center items-center">
       <p class="text-4xl md:text-2xl lg:text-4xl xl:text-6xl text-center">
@@ -80,216 +80,29 @@
     </p>
 
     <!-- Skill Categories as Cards -->
-    <div id="skills-container" class="container px-5 flex flex-wrap gap-8">
-      <!-- Languages Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-blue-400 mb-4">
-          Languages
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-code text-blue-400"></i> Java
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-code text-blue-400"></i> TypeScript
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-code text-blue-400"></i> JavaScript
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-code text-blue-400"></i> Python
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-code text-blue-400"></i> C++
-          </li>
-        </ul>
-      </div>
+    <div id="skills-container" class="px-5 flex flex-wrap flex-1 gap-y-4 gap-x-6">
 
-      <!-- Frameworks & Libraries Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-green-400 mb-4">
-          Frameworks & Libraries
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cogs text-green-400"></i> Angular
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cogs text-green-400"></i> Spring Boot
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cogs text-green-400"></i> Tailwind CSS
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cogs text-green-400"></i> Bootstrap
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cogs text-green-400"></i> Android Development
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cogs text-green-400"></i> Unity
-          </li>
-        </ul>
-      </div>
-
-      <!-- Databases Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-yellow-400 mb-4">
-          Databases
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-database text-yellow-400"></i> SQL
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-database text-yellow-400"></i> NoSQL (e.g., Firebase)
-          </li>
-        </ul>
-      </div>
-
-      <!-- Backend Development Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-red-400 mb-4">
-          Backend Development
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-server text-red-400"></i> Node.js & Express.js
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-server text-red-400"></i> Firebase
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-server text-red-400"></i> RESTful API Design
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-server text-red-400"></i> Authentication & JWT
-          </li>
-        </ul>
-      </div>
-
-      <!-- DevOps Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-teal-400 mb-4">
-          DevOps
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-teal-400"></i> Git & GitHub
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-teal-400"></i> Jenkins
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-teal-400"></i> Docker
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-teal-400"></i> CI/CD Pipelines
-          </li>
-        </ul>
-      </div>
-
-      <!-- Tools Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-purple-400 mb-4">
-          Tools
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-purple-400"></i> VS Code
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-purple-400"></i> PyCharm
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-purple-400"></i> IntelliJ IDEA
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-purple-400"></i> Spring Tool Suite (STS)
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-tools text-purple-400"></i> Postman
-          </li>
-        </ul>
-      </div>
-
-      <!-- Cloud Platforms Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-orange-400 mb-4">
-          Cloud Platforms
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cloud text-orange-400"></i> AWS
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cloud text-orange-400"></i> Azure
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cloud text-orange-400"></i> Google Cloud Platform (GCP)
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cloud text-orange-400"></i> Vultr
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-cloud text-orange-400"></i> Krutrim
-          </li>
-        </ul>
-      </div>
-
-      <!-- AI & ML Tools Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-pink-400 mb-4">
-          AI & ML Tools
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-robot text-pink-400"></i> Ollama
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-robot text-pink-400"></i> Continue.dev
-          </li>
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-robot text-pink-400"></i> Vertex AI
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exploring Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
-        <h2 class="text-2xl font-bold text-gray-300 mb-4">
-          Exploring
-        </h2>
-        <ul class="text-left space-y-2">
-          <li class="text-lg text-gray-200">
-            <i class="fas fa-search text-gray-300"></i> Open Source LLMs
-          </li>
-        </ul>
-      </div>
-
-      <!-- Currently Learning Card -->
-      <div class="bg-gray-800 p-6 rounded-lg grow">
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <p class="mt-12 italic text-white text-lg">
+        "Continuous learning is the minimum requirement for success in any field." — Brian Tracy
+      </p>
+      <div class="bg-gray-800 py-6 px-10 rounded-lg mt-5 w-min">
         <h2 class="text-2xl font-bold text-indigo-400 mb-4">
           Currently Learning
         </h2>
         <ul class="text-left space-y-2">
           <li class="text-lg text-gray-200">
-            <i class="fas fa-book text-indigo-400"></i> GraphQL
+            <i class="fas fa-book text-indigo-400 mr-2"></i> GraphQL
           </li>
           <li class="text-lg text-gray-200">
-            <i class="fas fa-book text-indigo-400"></i> Three.js
+            <i class="fas fa-book text-indigo-400 mr-2"></i> Three.js
           </li>
         </ul>
       </div>
     </div>
 
-    <p class="mt-12 italic text-gray-500 text-lg">
-      "Continuous learning is the minimum requirement for success in any field." — Brian Tracy
-    </p>
   </section>
-
-
-
 
   <!-- 
   <section id="about">

@@ -20,38 +20,29 @@ function updateFavicon() {
 setInterval(updateFavicon, 10000);
 //----------------------END---- Icon Changers
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Get the button element
-  const skillsButton = document.getElementById('skills-btn');
+  const skillsButton = document.getElementById("skills-btn");
 
   // Add an event listener to the button
-  skillsButton.addEventListener('click', function(event) {
+  skillsButton.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default button behavior
 
     // Get the "Skills" section element by its id
-    const skillsSection = document.getElementById('skills');
+    const skillsSection = document.getElementById("skills");
 
     // Scroll to the "Skills" section
-    window.scrollTo({ top: skillsSection.offsetTop, behavior: 'smooth' });
+    window.scrollTo({ top: skillsSection.offsetTop, behavior: "smooth" });
   });
 });
 
 // Define the categories and their content
 const skillCategories = [
   {
-    title: "Languages",
+    title: "Programming Languages",
     color: "text-blue-400",
-    icon: "fas fa-language",
-    items: [
-      "Java",
-      "TypeScript",
-      "Python",
-      "SQL",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
+    icon: "fas fa-code",
+    items: ["Java", "TypeScript", "JavaScript", "Python", "C++"],
   },
   {
     title: "Frameworks & Libraries",
@@ -63,76 +54,94 @@ const skillCategories = [
       "Bootstrap",
       "Tailwind CSS",
       "Android Development",
-      "Unity"
-    ]
+      "Unity",
+    ],
+  },
+  {
+    title: "Databases",
+    color: "text-yellow-400",
+    icon: "fas fa-database",
+    items: ["SQL", "NoSQL (e.g., Firebase Firestore)"],
+  },
+  {
+    title: "Backend Development",
+    color: "text-red-400",
+    icon: "fas fa-server",
+    items: [
+      "Firebase",
+      "Node.js & Express.js",
+      "RESTful API Design",
+      "Authentication & JWT",
+    ],
+  },
+  {
+    title: "DevOps",
+    color: "text-teal-400",
+    icon: "fas fa-tools",
+    items: ["Git & GitHub", "Jenkins", "Docker", "CI/CD Pipelines"],
+  },
+  {
+    title: "Tools",
+    color: "text-purple-400",
+    icon: "fas fa-tools",
+    items: [
+      "VS Code",
+      "PyCharm",
+      "IntelliJ IDEA",
+      "Spring Tool Suite(STS)",
+      "Postman",
+    ],
+  },
+  {
+    title: "Cloud Platforms",
+    color: "text-orange-400",
+    icon: "fas fa-cloud",
+    items: [
+      "AWS (Amazon Web Services)",
+      "Microsoft Azure",
+      "GCP (Google Cloud Platform)",
+      "Vultr",
+      "Krutrim",
+    ],
   },
   {
     title: "AI & ML Tools",
-    color: "text-purple-400",
-    icon: "fas fa-brain",
-    items: [
-      "Ollama",
-      "Continue.dev",
-      "Vertex AI"
-    ]
-  },
-  {
-    title: "DevOps & Tools",
-    color: "text-yellow-400",
-    icon: "fas fa-tools",
-    items: [
-      "Git & GitHub",
-      "Jenkins",
-      "Docker",
-      "AWS (EC2, S3)",
-      "VS Code",
-      "PyCharm",
-      "IntelliJ IDEA"
-    ]
-  },
-  {
-    title: "Database",
-    color: "text-red-400",
-    icon: "fas fa-database",
-    items: [
-      "Firebase",
-      "NoSQL Databases"
-    ]
+    color: "text-pink-400",
+    icon: "fas fa-robot",
+    items: ["Ollama", "Continue.dev", "Vertex AI"],
   },
   {
     title: "Exploring",
     color: "text-gray-400",
     icon: "fas fa-search",
-    items: [
-      "Open Source LLMs"
-    ]
-  }
+    items: ["Open Source LLMs"],
+  },
 ];
 
 // Function to create skill cards
 function createSkillSections() {
-  const container = document.getElementById('skills-container');
-  skillCategories.forEach(category => {
+  const container = document.getElementById("skills-container");
+  skillCategories.forEach((category) => {
     // Create card
-    const card = document.createElement('div');
-    card.classList.add('bg-gray-800', 'p-6', 'rounded-lg', 'grow');
-    
+    const card = document.createElement("div");
+    card.classList.add("bg-gray-800", "p-6", "rounded-lg", "grow");
+
     // Create title
-    const title = document.createElement('h2');
-    title.classList.add('text-2xl', 'font-bold', category.color, 'mb-4');
+    const title = document.createElement("h2");
+    title.classList.add("text-2xl", "font-bold", category.color, "mb-4");
     title.innerText = `${category.title}`;
-    
+
     // Create list
-    const list = document.createElement('ul');
-    list.classList.add('text-left', 'space-y-2');
-    
-    category.items.forEach(item => {
-      const listItem = document.createElement('li');
-      listItem.classList.add('text-lg', 'text-gray-200');
-      listItem.innerHTML = `<i class="${category.icon} ${category.color}"></i> ${item}`;
+    const list = document.createElement("ul");
+    list.classList.add("text-left", "space-y-2");
+
+    category.items.forEach((item) => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("text-lg", "text-gray-200");
+      listItem.innerHTML = `<i class="${category.icon} ${category.color} mr-2"></i> ${item}`;
       list.appendChild(listItem);
     });
-    
+
     card.appendChild(title);
     card.appendChild(list);
     container.appendChild(card);
@@ -140,5 +149,4 @@ function createSkillSections() {
 }
 
 // Call the function to create the sections
-document.addEventListener('DOMContentLoaded', createSkillSections);
-
+document.addEventListener("DOMContentLoaded", createSkillSections);

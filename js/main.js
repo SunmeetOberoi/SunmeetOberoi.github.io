@@ -20,21 +20,12 @@ function updateFavicon() {
 setInterval(updateFavicon, 10000);
 //----------------------END---- Icon Changers
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the button element
-  const skillsButton = document.getElementById("skills-btn");
-
-  // Add an event listener to the button
-  skillsButton.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default button behavior
-
-    // Get the "Skills" section element by its id
-    const skillsSection = document.getElementById("skills");
-
-    // Scroll to the "Skills" section
-    window.scrollTo({ top: skillsSection.offsetTop, behavior: "smooth" });
+function smoothScrollTo(id) {
+  window.scrollTo({
+    top: document.getElementById(id).offsetTop,
+    behavior: "smooth",
   });
-});
+}
 
 // Define the categories and their content
 const skillCategories = [
@@ -42,7 +33,13 @@ const skillCategories = [
     title: "Programming Languages",
     color: "text-blue-400",
     icon: "fas fa-code",
-    items: ["<b class='font-extrabold'>Java</b>", "TypeScript", "JavaScript", "Python", "C++"],
+    items: [
+      "<b class='font-extrabold'>Java</b>",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "C++",
+    ],
   },
   {
     title: "Frameworks & Libraries",
@@ -55,7 +52,7 @@ const skillCategories = [
       "Android Development",
       "Unity",
       "Discord Bots",
-      "Google AR Core"
+      "Google AR Core",
     ],
   },
   {
@@ -73,7 +70,7 @@ const skillCategories = [
       "Node.js & Express.js",
       "RESTful API Design",
       "Authentication & JWT",
-      "Serverless Functions"
+      "Serverless Functions",
     ],
   },
   {
@@ -98,7 +95,7 @@ const skillCategories = [
       "IntelliJ IDEA",
       "Spring Tool Suite(STS)",
       "Postman",
-      "WSL2"
+      "WSL2",
     ],
   },
   {

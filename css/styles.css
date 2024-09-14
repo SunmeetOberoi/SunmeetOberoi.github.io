@@ -10,3 +10,37 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #555;
 }
+
+.link-hover-effect {
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.link-hover-effect::before,
+.link-hover-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: all 0.5s ease;
+}
+
+.link-hover-effect::before {
+  left: 0;
+}
+
+.link-hover-effect::after {
+  right: 0;
+}
+
+.link-hover-effect:hover::before,
+.link-hover-effect:hover::after {
+  width: 50%;
+}
+
+.link-hover-effect:hover {
+  font-weight: bold;
+}

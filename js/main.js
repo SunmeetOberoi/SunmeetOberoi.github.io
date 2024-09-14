@@ -1,5 +1,6 @@
+//----------------------START---- Icon Changers
 // Define an array of emojis to cycle through
-const emojis = ["👨‍💻", "🤖", "🚀", "😎", "🔥", "🥷", "🐦‍🔥"];
+const emojis = ["👨‍💻", "🤖", "🚀", "😎", "🔥", "🥷"];
 
 // Get a reference to the favicon link element
 const faviconLink = document.querySelector('link[rel="icon"]');
@@ -17,3 +18,4 @@ function updateFavicon() {
 
 // Call the updateFavicon function every 5 seconds
 setInterval(updateFavicon, 2000);
+//----------------------END---- Icon Changers

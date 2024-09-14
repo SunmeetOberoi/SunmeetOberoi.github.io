@@ -158,20 +158,72 @@ function createSkillSections() {
 document.addEventListener("DOMContentLoaded", createSkillSections);
 
 //------------------------------Back to top Button-------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-  const backToTopButton = document.getElementById('back-to-top');
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopButton = document.getElementById("back-to-top");
 
   // Show or hide the button based on scroll position
-  window.addEventListener('scroll', function() {
+  window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
-      backToTopButton.classList.remove('hidden');
+      backToTopButton.classList.remove("hidden");
     } else {
-      backToTopButton.classList.add('hidden');
+      backToTopButton.classList.add("hidden");
     }
   });
 
   // Smooth scroll to top when the button is clicked
-  backToTopButton.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  backToTopButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+// ----show email
+document.addEventListener("DOMContentLoaded", function () {
+  const copyButton = document.getElementById("copy-email");
+  const feedback = document.getElementById("copy-feedback");
+  const email = "sunmeet.oberoi@gmail.com";
+
+  copyButton.addEventListener("click", function () {
+    // Copy email to clipboard
+    navigator.clipboard.writeText(email).then(() => {
+      // Show feedback
+      feedback.classList.add("opacity-100");
+      setTimeout(() => {
+        feedback.classList.remove("opacity-100");
+      }, 2000);
+    });
+  });
+
+  copyButton.addEventListener("mouseover", function () {
+    document.getElementById("email-address").classList.add("opacity-100");
+  });
+
+  copyButton.addEventListener("mouseleave", function () {
+    document.getElementById("email-address").classList.remove("opacity-100");
+  });
+});
+
+// ----show discord
+document.addEventListener("DOMContentLoaded", function () {
+  const copyButton = document.getElementById("copy-discord");
+  const feedback = document.getElementById("copy-feedback-discord");
+  const username = "dehoen";
+
+  copyButton.addEventListener("click", function () {
+    // Copy username to clipboard
+    navigator.clipboard.writeText(username).then(() => {
+      // Show feedback
+      feedback.classList.add("opacity-100");
+      setTimeout(() => {
+        feedback.classList.remove("opacity-100");
+      }, 2000);
+    });
+  });
+
+  copyButton.addEventListener("mouseover", function () {
+    document.getElementById("discord-username").classList.add("opacity-100");
+  });
+
+  copyButton.addEventListener("mouseleave", function () {
+    document.getElementById("discord-username").classList.remove("opacity-100");
   });
 });

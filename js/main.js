@@ -42,19 +42,20 @@ const skillCategories = [
     title: "Programming Languages",
     color: "text-blue-400",
     icon: "fas fa-code",
-    items: ["Java", "TypeScript", "JavaScript", "Python", "C++"],
+    items: ["<b class='font-extrabold'>Java</b>", "TypeScript", "JavaScript", "Python", "C++"],
   },
   {
     title: "Frameworks & Libraries",
     color: "text-green-400",
     icon: "fas fa-cogs",
     items: [
-      "Spring Boot",
-      "Angular",
-      "Bootstrap",
-      "Tailwind CSS",
+      "<b class='font-extrabold'>Spring Boot</b>",
+      "<b class='font-extrabold'>Angular</b>",
+      "Bootstrap & Tailwind CSS",
       "Android Development",
       "Unity",
+      "Discord Bots",
+      "Google AR Core"
     ],
   },
   {
@@ -72,13 +73,20 @@ const skillCategories = [
       "Node.js & Express.js",
       "RESTful API Design",
       "Authentication & JWT",
+      "Serverless Functions"
     ],
   },
   {
     title: "DevOps",
     color: "text-teal-400",
     icon: "fas fa-tools",
-    items: ["Git & GitHub", "Jenkins", "Docker", "CI/CD Pipelines"],
+    items: [
+      "Git & GitHub",
+      "Jenkins",
+      "Docker",
+      "CI/CD Pipelines",
+      "Cloud Foundry",
+    ],
   },
   {
     title: "Tools",
@@ -90,6 +98,7 @@ const skillCategories = [
       "IntelliJ IDEA",
       "Spring Tool Suite(STS)",
       "Postman",
+      "WSL2"
     ],
   },
   {

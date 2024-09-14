@@ -156,3 +156,4 @@ function createSkillSections() {
 
 // Call the function to create the sections
 document.addEventListener("DOMContentLoaded", createSkillSections);
+

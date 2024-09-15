@@ -160,10 +160,11 @@ document.addEventListener("DOMContentLoaded", createSkillSections);
 //------------------------------Back to top Button-------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopButton = document.getElementById("back-to-top");
+  const showAtScrollY = window.innerHeight / 2; // Adjust based on screen height
 
   // Show or hide the button based on scroll position
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
+    if (window.scrollY > showAtScrollY) {
       backToTopButton.classList.remove("hidden");
     } else {
       backToTopButton.classList.add("hidden");

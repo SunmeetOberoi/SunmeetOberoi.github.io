@@ -25,6 +25,10 @@ function smoothScrollTo(id) {
     top: document.getElementById(id).offsetTop,
     behavior: "smooth",
   });
+  gtag("event", "section_navigation", {
+    event_category: "navigation",
+    event_label: id,
+  });
 }
 
 // Define the categories and their content
@@ -188,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navigator.clipboard.writeText(email).then(() => {
       // Show feedback
       feedback.classList.add("opacity-100");
+      gtag("event", "email_copied");
       setTimeout(() => {
         feedback.classList.remove("opacity-100");
       }, 2000);
@@ -214,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navigator.clipboard.writeText(username).then(() => {
       // Show feedback
       feedback.classList.add("opacity-100");
+      gtag("event", "discord_copied");
       setTimeout(() => {
         feedback.classList.remove("opacity-100");
       }, 2000);

@@ -126,6 +126,12 @@ const skillCategories = [
     icon: "fas fa-search",
     items: ["Open Source LLMs"],
   },
+  {
+    title: "IoT",
+    color: "text-indigo-400",
+    icon: "fas fa-microchip",
+    items: ["Arduino", "Raspberry Pi", "ESP32"],
+  }
 ];
 
 // Function to create skill cards

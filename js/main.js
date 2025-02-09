@@ -57,6 +57,7 @@ const skillCategories = [
       "Unity",
       "Discord Bots",
       "Google AR Core",
+      "Eleventy"
     ],
   },
   {
@@ -112,13 +113,14 @@ const skillCategories = [
       "GCP (Google Cloud Platform)",
       "Vultr",
       "Krutrim",
+      "Vast.ai"
     ],
   },
   {
     title: "AI & ML Tools",
     color: "text-pink-400",
     icon: "fas fa-robot",
-    items: ["Ollama", "Continue.dev", "Vertex AI"],
+    items: ["Ollama", "Continue.dev", "Vertex AI", "Comfy UI"],
   },
   {
     title: "Exploring",
